@@ -31,6 +31,12 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_STANDARD 11)
 include(GenerateExportHeader)
 
+# NOTE: We can't statically link with the MSVC runtime due to GPL restrictions
+#
+# We also purposefully choose not to use the debug DLL, as that would require
+# users of our development builds to install the Windows SDK
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+
 add_compile_definitions($<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>)
 
 if(MSVC)
