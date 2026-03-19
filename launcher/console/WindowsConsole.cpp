@@ -19,6 +19,9 @@
 #include "WindowsConsole.h"
 #include <system_error>
 
+//microslop is stinky
+//yea i said it
+
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
