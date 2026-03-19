@@ -148,6 +148,7 @@ std::error_code EnableAnsiSupport()
     // ref: https://docs.microsoft.com/en-us/windows/console/getconsolemode
     DWORD console_mode;
     if (0 == GetConsoleMode(console_handle, &console_mode)) {
+        CloseHandle(console_handle);
         return std::error_code(GetLastError(), std::system_category());
     }
 
@@ -155,18 +156,17 @@ std::error_code EnableAnsiSupport()
     if ((console_mode & ENABLE_VIRTUAL_TERMINAL_PROCESSING) == 0) {
         // https://docs.microsoft.com/en-us/windows/console/setconsolemode
         if (0 == SetConsoleMode(console_handle, console_mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING)) {
+            CloseHandle(console_handle);
             return std::error_code(GetLastError(), std::system_category());
         }
     }
 
+    CloseHandle(console_handle);
     return {};
 }
 
 void FreeWindowsConsole()
 {
-    fclose(stdout);
-    fclose(stdin);
-    fclose(stderr);
     FreeConsole();
 }
 
