@@ -1,7 +1,7 @@
 <p align="center">
 <picture>
   <source media=srcset="/readmeassets/graphicdesignismypassion.png">
-  <img alt="Silly's Impossible Levels List, yea Launcher" src="/program_info/org.prismlauncher.PrismLauncher.logo.svg" width="40%">
+  <img alt="Silly's Impossible Levels List, yea Launcher" src="/readmeassets/graphicdesignismypassion.png" width="40%">
 </picture>
 </p>
 
