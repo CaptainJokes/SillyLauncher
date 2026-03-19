@@ -23,6 +23,7 @@ CMakeUserPresets.json
 cmake-build-*/
 Debug
 compile_commands.json
+/readmeassets
 
 # Build dirs
 build
@@ -62,3 +63,6 @@ flatbuild
 
 # Snap
 *.snap
+
+#Readme
+README.md
