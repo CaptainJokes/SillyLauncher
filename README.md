@@ -11,3 +11,6 @@
 </p>
 
 <p>!!! This is not a continuation of Prism, nor meant for regular usage, this is a passion project !!!</p>
+<p>If you want to get Minecraft Java's server software, you can check it out here:</p> https://www.minecraft.net/en-us/download/server
+
+<p>Support the original project!: </p> https://prismlauncher.org/ https://github.com/PrismLauncher/PrismLauncher
